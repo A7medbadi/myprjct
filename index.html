@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Layali — Sweets, Frozen Yogurt &amp; Drinks</title>
+  <meta name="description"
+    content="Layali Cafe serves artisan frozen yogurt, bubble waffles, canned cakes, matcha, milkshakes, and iced coffee. Experience our handcrafted sweets &amp; drinks." />
+  <meta name="theme-color" content="#7e7a7aff" />
+
+  <!-- Security headers via meta (TODO(security): set proper headers on production server) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" aria-label="Layali Home">
+        <img src="images/logo.png" alt="Layali — Sweets, Frozen Yogurt &amp; Drinks" class="logo" id="header-logo" />
+      </a>
+
+      <nav class="nav-links" id="nav-desktop" aria-label="Primary navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <!-- TODO(security): replace '#' with actual WhatsApp link -->
+        <a href="#contact" class="nav-cta">
+          <span>📞</span> Contact Us
+        </a>
+      </nav>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+    <button class="close-btn" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    <nav class="mobile-nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero-bg.png" alt="Layali cafe interior with beautifully arranged desserts" />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <img src="images/herologo.png" alt="Layali" class="hero-logo" />
+      <p class="hero-tagline">"Where Every Bite Tells a Story"</p>
+      <p class="hero-subtitle">Sweets &bull; Frozen Yogurt &bull; Drinks</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Visit Us</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <img src="images/about.jpg" alt="A beautiful arrangement of Layali sweets and drinks" />
+        </div>
+        <div class="about-text reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-heading">Crafted with<br />Passion &amp; Love</h2>
+          <p>
+            At Layali, we believe that the best moments in life are sweetened by handcrafted treats. Born from a love
+            for artisan desserts and specialty drinks, we bring you a curated selection of frozen yogurt, bubble
+            waffles, canned cakes, and signature beverages — each made fresh, with premium ingredients.
+          </p>
+          <p>
+            Whether you're craving a rich pistachio milkshake, a refreshing mango iced tea, or our famous canned
+            cheesecake, every item on our menu is designed to delight your senses and create moments worth savoring.
+          </p>
+          <p class="signature">— The Layali Family</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <span class="section-label">Our Selection</span>
+        <h2 class="section-heading">Our Menu</h2>
+        <p class="section-subtext">Click or tap on the menu below to view in full screen and zoom.</p>
+      </div>
+
+      <div class="menu-display-wrapper reveal">
+        <div class="menu-image-card" id="menu-card-trigger">
+          <div class="menu-image-crop">
+            <img src="images/menu.png" alt="Layali Cafe Menu" />
+          </div>
+          <div class="menu-overlay-hint">
+            <div class="hint-content">
+              <span class="hint-icon">🔍</span>
+              <p>Click to View Full Screen</p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-mobile-action">
+          <button class="btn btn-outline-dark" id="menu-mobile-trigger">🔍 View Full Screen Menu</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header">
+        <span class="section-label">Gallery</span>
+        <h2 class="section-heading">A Taste of Layali</h2>
+        <p class="section-subtext">Moments captured from our cafe — sweets, smiles, and good vibes.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Gallery placeholder images — replace with real photos -->
+        <div class="gallery-item reveal">
+          <img src="images/moment1.jpg" alt="Layali dessert spread" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/moment2.jpg" alt="Cafe atmosphere" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/moment3.jpg" alt="Frozen yogurt close-up" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/moment4.jpg" alt="Iced drinks lineup" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/moment5.jpg" alt="Bubble waffle preparation" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <span class="section-label">What People Say</span>
+        <h2 class="section-heading">Happy Customers</h2>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The canned cake is absolutely divine! I ordered a box for a birthday and everyone
+            was obsessed. Layali never disappoints."</p>
+          <p class="testimonial-author">Sara M.</p>
+          <p class="testimonial-role">Regular Customer</p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Best frozen yogurt in town — the Oreo Extreme bubble waffle is a must-try! The
+            place has such a cozy, stylish vibe."</p>
+          <p class="testimonial-author">Ahmed K.</p>
+          <p class="testimonial-role">Dessert Lover</p>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Their iced caramel pistachio coffee is my daily go-to. Perfectly balanced, super
+            refreshing. 10 out of 10!"</p>
+          <p class="testimonial-author">Nour E.</p>
+          <p class="testimonial-role">Coffee Enthusiast</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-heading">Visit Us</h2>
+        <p class="section-subtext">We'd love to see you! Drop by for a treat, call us, or reach out on social media.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <h4>Address</h4>
+              <!-- TODO: Replace with your real address -->
+              <p>N120, 132 Av. IBN KHALDOUNE, Nador 62000</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <h4>Phone</h4>
+              <!-- TODO: Replace with your real phone number -->
+              <a href="tel:+201234567890">+212 06 *** ***</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-detail">
+              <h4>Opening Hours</h4>
+              <p>Daily: 13:00 PM — 01:00 AM</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <h4>Email</h4>
+              <!-- TODO: Replace with your real email -->
+              <a href="mailto:hello@layali.com">hello@layali.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <!-- TODO: Replace with your actual Google Maps embed URL -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.1171736184513!2d-2.92532432422002!3d35.17968990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd77a72dd44f73e7%3A0x618c5b91887be639!2sLAYALI%20NADOR%20%7C%20Sweets%20%E2%80%A2%20Frozen%20Yogurt%20%E2%80%A2%20Drinks!5e0!3m2!1sen!2sma!4v1717618585000!5m2!1sen!2sma"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Layali location on Google Maps"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="images/logo.png" alt="Layali" class="footer-logo" />
+
+      <p class="footer-copy">&copy; 2026 Layali. All rights reserved.</p>
+
+      <div class="social-links">
+        <!-- TODO: Replace '#' with your real social media URLs -->
+        <a href="#" aria-label="Instagram" title="Follow us on Instagram">
+          📸
+        </a>
+        <a href="#" aria-label="Facebook" title="Follow us on Facebook">
+          📘
+        </a>
+        <a href="#" aria-label="TikTok" title="Follow us on TikTok">
+          🎵
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+  <!-- TODO: Replace '#' with your WhatsApp chat link: https://wa.me/YOUR_NUMBER -->
+  <a href="#" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+    💬
+  </a>
+
+  <!-- Menu Lightbox Overlay -->
+  <div class="menu-lightbox" id="menu-lightbox" role="dialog" aria-label="Menu fullscreen view" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close fullscreen view">✕</button>
+    <div class="lightbox-content">
+      <img src="images/menu.png" alt="Layali Cafe Menu Fullscreen" class="lightbox-img" id="lightbox-img" />
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
